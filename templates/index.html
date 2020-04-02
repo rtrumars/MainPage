@@ -1,26 +1,16 @@
-<!-- Proudly coded by Billy (https://bybilly.uk) -->
-<!-- Version: 1.9 -->
 
 <!DOCTYPE html>
 <html>
 <header>
-	<link rel="stylesheet" href="css/auroral.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/auroral.css') }}">
 </header>
 <head>
 	<!-- Info meta tags, important for social media + SEO -->
 	<title>Pea</title>
-	<meta name="description" content="MyServer is a new and awesome Minecraft server. You can join with the IP 'play.myserver.net'.">
-	<meta property="og:title" content="MyServer - Official Website Portal">
-	<meta property="og:site_name" content="MyServer">
-	<meta property="og:description" content="MyServer is a new and awesome Minecraft server. You can join with the IP 'play.myserver.net'.">
-	<meta property="og:image" content="https://bybilly.uk/portal/img/minecraft.jpg">
-	<meta property="og:url" content="https://bybilly.uk/">
-	<meta name="twitter:card" content="summary_large_image">
-
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 </head>
@@ -32,33 +22,29 @@
 		<div class="logo">
 		</div>
 		<div class="logo">
-			<!-- In the img folder, upload your logo -->
-			<!-- Make sure you name it 'logo.png' -->
-			<img src="img/logo.png" alt="PeaLogo" style="width:300px;height:300px">
+
+			<img src="{{ url_for('static', filename='img/pea.png') }}" alt="Pea Logo" style="width:200px;height:300px">
 		</div>
 		<div class="items">
-			<!-- Replace # with your forum URL-->
 			<a href="#" class="item forums">
 			<div>
-				<img src="img/forums.png" alt="Minecraft forums icon" class="img">
+				<img src="{{ url_for('static', filename='img/chats.png') }}" alt="Chat Icon" class="img">
 				<p class="title">Tērzētuve</p>
 				<p class="subtitle">saziņai ar apmeklētajiem</p>
 			</div>
 			</a>
 
-			<!-- Replace # with your store URL -->
 			<a href="#" class="item store">
 			<div>
-				<img src="img/store.png" alt="Minecraft store icon" class="img">
+				<img src="{{ url_for('static', filename='img/forum.png') }}" alt="Forum Icon" class="img">
 				<p class="title">Forums</p>
 				<p class="subtitle">izveidotie darbi</p>
 			</div>
 			</a>
-
-			<!-- Replace # with your vote URL -->
+			
 			<a href="#" class="item vote">
 			<div>
-				<img src="img/vote.png" alt="Minecraft voting icon" class="img">
+				<img src="{{ url_for('static', filename='img/discord.png') }}" alt="Discord Icon" class="img">
 				<p class="title">Discord</p>
 				<p class="subtitle">mūsu discord serveris</p>
 			</div>
@@ -74,7 +60,7 @@
 	</div>
 </div>
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
-	<script src="js/firefly.js" type="text/javascript"></script>
-	<script src="js/main.js" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename='javascript/main.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename='javascript/firefly.js') }}" type="text/javascript"></script>
 </body>
 </html>
